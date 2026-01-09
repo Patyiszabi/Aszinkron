@@ -3,7 +3,7 @@
  * 
  * Ez a példa bemutatja, hogyan lehet aszinkron műveleteket
  * Promise-okkal és .then()/.catch() metódusokkal kezelni.
- */
+     */
 
 // 1. Promise: Recept azonosítók lekérése a szerverről
 const azonositokLekerese = new Promise((resolve, reject) => {
