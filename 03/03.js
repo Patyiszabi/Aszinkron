@@ -1,8 +1,11 @@
-  async function randomnumber() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const randomNum = Math.floor(Math.random() * 100) + 1;
-            resolve(randomNum);
-        }, 2000);
-    });
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function uzenetKesesleltetve() {
+    const uzenetElem = document.getElementById('uzenet');
+    uzenetElem.textContent = 'Uzenet betoltese...';
+
+    await wait(1000);
+    uzenetElem.textContent = 'Megjott az uzenet 1 masodperc kesleltetessel.';
 }
+
+document.getElementById('uzenetGomb').addEventListener('click', uzenetKesesleltetve);

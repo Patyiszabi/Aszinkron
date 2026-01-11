@@ -1,25 +1,14 @@
-async function idozitettuzenet() {
-    setTimeout(() => {
-        console.log("1 ms");
-    }, 1000);
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-    setTimeout(() => {
-    console.log("2 ms");
-    }, 2000);
-}
-idozitettuzenet();
+async function idozitettUzenetek() {
+    await wait(1000);
+    console.log('1 masodperc');
 
+    await wait(1000);
+    console.log('2 masodperc');
 
-function idozitettpromise(ido) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(console.log("Eltelt ido " + ido/1000 + " ms"));
-        }, ido);
-    });
+    await wait(1000);
+    console.log('3 masodperc');
 }
 
-async function idozitettuzenetek() {
-    await idozitettpromise(1000);
-    await idozitettpromise(2000);
-    await idozitettpromise(3000);
-}
+idozitettUzenetek();
