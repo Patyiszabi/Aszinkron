@@ -8,9 +8,9 @@ function veletlenszamgenerator() {
     });
 }
 
-async function veletlenSzamMegjelenit() {
+async function megjelenites() {
     const szam = await veletlenszamgenerator();
     console.log('Veletlen szam:', szam);
 }
 
-veletlenSzamMegjelenit();
+megjelenites();
